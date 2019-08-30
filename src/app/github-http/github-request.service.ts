@@ -20,10 +20,11 @@ export class GithubRequestService {
       public_repos: number;
     }
     let promise = new Promise((resolve, reject) => {
-      this.http.get<ApiResponse>("https://api.github.com/users/GasaGentille"+environment.key).toPromise().then(response => {
+      this.http.get<ApiResponse>("https://api.github.com/users/GasaGentille?access_token="+environment.key).toPromise().then(response => {
         this.user.username = response.login
         this.user.profile = response.avatar_url
         this.user.repoNumber = response.public_repos
+        console.log(this.user)
         resolve()
       },
         error =>{

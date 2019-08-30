@@ -1,6 +1,8 @@
 <table>
-    <td rowspan="3">{{user.avatar_url}}</td>
-    <td>{{user.login}}</td>
-    <td>{{user.public_repos}}</td> 
+    <tr>
+    <td rowspan="3"><img src="{{user.profile}}"></td></tr>
+   <tr><td> Username: {{user.username}}</td></tr>
+    <td>Repositories: {{user.repoNumber}}</td> 
+
 </table>
 <!-- <app-github-form></app-github-form> -->
