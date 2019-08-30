@@ -3,6 +3,14 @@
     <td rowspan="3"><img src="{{user.profile}}"></td></tr>
    <tr><td> Username: {{user.username}}</td></tr>
     <td>Repositories: {{user.repoNumber}}</td> 
+    
 
 </table>
+<div *ngFor='let repository of repositories'>
+   <p> {{repository.name}}</p>
+    {{repository.html_url}}
+    {{repository.created_at}}
+</div>
+
+
 <!-- <app-github-form></app-github-form> -->

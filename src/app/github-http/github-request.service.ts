@@ -24,7 +24,7 @@ export class GithubRequestService {
         this.user.username = response.login
         this.user.profile = response.avatar_url
         this.user.repoNumber = response.public_repos
-        console.log(this.user)
+        // console.log(this.user)
         resolve()
       },
         error =>{
