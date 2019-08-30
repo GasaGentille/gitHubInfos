@@ -1,5 +1,5 @@
 export class Repository {
    
-        constructor(public repoName:string, public description:string, public date:Date){}
+        constructor(public name:string, public html_url:string, public created_at:Date){}
     }
 
