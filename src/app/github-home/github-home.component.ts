@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { User } from '../user';
+import { GithubRequestService } from '../github-http/github-request.service'
+
 
 @Component({
   selector: 'app-github-home',
@@ -7,9 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubHomeComponent implements OnInit {
 
-  constructor() { }
+  user: User;
+  constructor(private githubService: GithubRequestService) { 
+     
+  }
 
   ngOnInit() {
+    this.githubService.githubRequest()
+    this.user = this.githubService.user
   }
 
 }

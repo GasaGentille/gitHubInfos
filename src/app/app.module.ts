@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { GithubFormComponent } from './github-form/github-form.component';
 // 
 import{ HttpClientModule } from '@angular/common/http';
+import{ FormsModule }from '@angular/forms';
 import { GithubHomeComponent } from './github-home/github-home.component';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { GithubHomeComponent } from './github-home/github-home.component';
     BrowserModule,
     AppRoutingModule,
     // 
+    FormsModule,
     HttpClientModule
    
   ],
