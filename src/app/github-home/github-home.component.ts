@@ -15,6 +15,7 @@ export class GithubHomeComponent implements OnInit {
   user: User;
   repositories:Repository[];
   constructor(private githubService: GithubRequestService, private repoServ: RepoRequestService, private route:ActivatedRoute) { 
+    this.githubService = githubService;
      
   }
 
