@@ -20,7 +20,7 @@ export class GithubHomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    let username = this.route.snapshot.paramMap.get('usernama')
+    let username = this.route.snapshot.paramMap.get('username')
     this.githubService.githubRequest(username)
     this.user = this.githubService.user
     this.repoServ.githubRequest()

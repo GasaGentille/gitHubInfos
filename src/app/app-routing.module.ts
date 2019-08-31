@@ -7,7 +7,7 @@ import { GithubHomeComponent } from './github-home/github-home.component';
 
 const routes: Routes = [
   {path:'github-form', component: GithubFormComponent},
-  {path: 'github-home', component: GithubHomeComponent}
+  {path: 'github-home/:username', component: GithubHomeComponent}
 ];
 
 @NgModule({

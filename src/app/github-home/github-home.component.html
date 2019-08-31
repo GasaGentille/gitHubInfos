@@ -1,15 +1,15 @@
 <table>
     <tr>
-    <td rowspan="3"><img src="{{user.profile}}">Username: {{user.username}}</td>
+    <td rowspan="3"><img src="{{user.profile}}">Username: {{user.username}}</td></tr>
    <!-- <tr><td> Username: {{user.username}}</td></tr> -->
-    <td>Repositories: {{user.repoNumber}}<a href="{{repository.html_url}}">{{repository.name}}</a></td> 
-    
-</tr>
+    <td>Repositories: {{user.repoNumber}}</td> 
+
+
 </table>
 <div *ngFor='let repository of repositories'>
    <!-- <p> {{repository.name}}</p> -->
-    <a href="{{repository.html_url}}">{{repository.name}}</a>
-    {{repository.created_at}}
+    <a href="{{repository.html_url}}">{{repository.name}}  </a>
+    {{repository.created_at|date}}
 </div>
 
 
