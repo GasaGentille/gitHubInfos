@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-github-form',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./github-form.component.css']
 })
 export class GithubFormComponent implements OnInit {
+  goToUrl(username){
+    this.router.navigate(['/user',username])
+  }
 
-  constructor() { }
+  constructor( private router:Router) { }
 
   ngOnInit() {
   }

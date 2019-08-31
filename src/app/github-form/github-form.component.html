@@ -5,9 +5,9 @@
 <form>
     <div class="input-group">
         <!-- <label>GitHub username:</label> -->
-        <input type="text" class="form-control" placeholder="GitHub username:" ><br>
+        <input type="text" class="form-control" placeholder="GitHub username:" #username><br>
         <div class="input-group-btn">
-            <button class="btn btn-success" type="submit">Search
+            <button class="btn btn-success" type="submit" (click)=goToUrl(username.value)>Search
         
             </button>
         </div>

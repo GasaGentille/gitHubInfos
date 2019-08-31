@@ -4,8 +4,7 @@ import { User } from '../user';
 import { GithubRequestService } from '../github-http/github-request.service'
 import { Repository } from '../repository';
 import { RepoRequestService } from '../repo-http/repo-request.service';
-
-
+import{ ActivatedRoute,ParamMap} from '@angular/router';
 @Component({
   selector: 'app-github-home',
   templateUrl: './github-home.component.html',
@@ -15,12 +14,13 @@ export class GithubHomeComponent implements OnInit {
 
   user: User;
   repositories:Repository[];
-  constructor(private githubService: GithubRequestService, private repoServ: RepoRequestService) { 
+  constructor(private githubService: GithubRequestService, private repoServ: RepoRequestService, private route:ActivatedRoute) { 
      
   }
 
   ngOnInit() {
-    this.githubService.githubRequest()
+    let username = this.route.snapshot.paramMap.get('usernama')
+    this.githubService.githubRequest(username)
     this.user = this.githubService.user
     this.repoServ.githubRequest()
     this.repositories=this.repoServ.repositories;
