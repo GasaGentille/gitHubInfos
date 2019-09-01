@@ -1,13 +1,21 @@
 <!-- <table>
    <tr> <td></td>
     <p></p> -->
+    <table>
+      <tr>
+        <td>
     <div><img src="{{user.profile}}"></div>
     <div>{{user.username}}</div>
+  </td>
+  <td>Repositories: {{user.repoNumber}}  <div *ngFor='let repository of repositories'><a href="{{repository.html_url}}">{{repository.name}}</a></div></td>
+  <td>Created at{{repository.created_at|date}}</td>
+  </tr>
+  </table>
 
    <!-- <tr><td> Username: {{user.username}}</td></tr> -->
-    <!-- <td>Repositories: {{user.repoNumber}}-->
+    <!-- <td>Repositories: {{user.repoNumber}}
         <div *ngFor='let repository of repositories'>
-            <div> {{repository.name}}</div>
+            <-- <p> {{repository.name}}</p> -->
              <!-- <a href="{{repository.html_url}}">{{repository.name}}  </a>
              {{repository.created_at|date}}
          </div> -->
