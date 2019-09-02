@@ -1,6 +1,12 @@
 # GitHubInfos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+This project was generated Using angular and it displays GitHub user information(username, profile and repositories) whenever he/she enter his username in form and press search button.
+
+# App installation
+we install this application by running the following commands in Terminal CLI: 1.$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash : node version manager install 2.$ nvm install node : Node install 3.$ sudo npm install -g @angular/cli : Angular installation 4.$ sudo npm install -g typescript : Typescript install
+
+link to the deployed website
+Link to repository: https://github.com/GasaGentille/gitHubInfos
 
 ## Development server
 
@@ -25,3 +31,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
