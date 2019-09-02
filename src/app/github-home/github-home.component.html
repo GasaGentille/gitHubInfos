@@ -1,28 +1,27 @@
 <!-- <table>
    <tr> <td></td>
     <p></p> -->
-    <table>
-      <tr>
+<table>
+    <tr>
+        <th>
+            <h3>{{user.username}}</h3>
+        </th>
+        <th><h3>Repositories: {{user.repoNumber}}</h3> </th>
+       
+    </tr>
+    <tr>
         <td>
-    <div><img src="{{user.profile}}"></div>
-    <div>{{user.username}}</div>
-  </td>
-  <td>Repositories: {{user.repoNumber}}  <div *ngFor='let repository of repositories'><a href="{{repository.html_url}}">{{repository.name}}</a></div></td>
-  <td>Created at{{repository.created_at|date}}</td>
-  </tr>
-  </table>
+            <img src="{{user.profile}}">
 
-   <!-- <tr><td> Username: {{user.username}}</td></tr> -->
-    <!-- <td>Repositories: {{user.repoNumber}}
-        <div *ngFor='let repository of repositories'>
-            <-- <p> {{repository.name}}</p> -->
-             <!-- <a href="{{repository.html_url}}">{{repository.name}}  </a>
-             {{repository.created_at|date}}
-         </div> -->
-    <!-- </td>   -->
+        </td>
+        <td><div class="repos" *ngFor='let repository of repositories'><a href="{{repository.html_url}}">{{repository.name}}</a>
+                &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp;  created_at &nbsp; &nbsp; &nbsp; &nbsp;{{repository.created_at|date}}</div>
+        </td>
+      
+        <!-- <td>Created at{{repository.created_at|date}}</td> -->
+    </tr>
+</table>
 
-<!-- </tr>
-</table> -->
 
 
 
