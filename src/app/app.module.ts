@@ -9,13 +9,15 @@ import{ HttpClientModule } from '@angular/common/http';
 import{ FormsModule }from '@angular/forms';
 import { GithubHomeComponent } from './github-home/github-home.component';
 import { GithubSearchDirective } from './github-search.directive';
+import { RepoCreatedAtPipe } from './repo-created-at.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubFormComponent,
     GithubHomeComponent,
-    GithubSearchDirective
+    GithubSearchDirective,
+    RepoCreatedAtPipe
   ],
   imports: [
     BrowserModule,
