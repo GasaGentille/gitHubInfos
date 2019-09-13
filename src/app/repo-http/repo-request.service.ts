@@ -15,7 +15,7 @@ export class RepoRequestService {
     // this.repository = new Repository("", "", new Date());
     this.repositories= [];
   }
-  githubRequest() {
+  githubRequest(username) {
     interface ApiResponse {
       name: string;
       html_url: string;
@@ -23,7 +23,7 @@ export class RepoRequestService {
     }
 
     let promise = new Promise((resolve, reject) =>
-      this.http.get<ApiResponse>("https://api.github.com/users/GasaGentille/repos?access_token=" + environment.key).toPromise().then(response => {
+      this.http.get<ApiResponse>("https://api.github.com/users/"+username+"/repos?access_token=" + environment.key).toPromise().then(response => {
       for(var r in response){
         this.repositories.push(response[r])
         resolve()

@@ -14,7 +14,7 @@
             <img src="{{user.profile}}">
 
         </td>
-        <td><div class="repos" *ngFor='let repository of repositories'><a href="{{repository.html_url}}">{{repository.name}}</a>
+        <td><div class="repos" *ngFor='let repository of repositories'><a href="{{repository.repos_url}}">{{repository.name}}</a>
                 &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp;  created_at &nbsp; &nbsp; &nbsp; &nbsp;{{repository.created_at|date}}</div>
         </td>
       
